@@ -1,0 +1,289 @@
+/*creating a frame to emulate commodore 64 starup screen*/
+.c64 {
+  background-color:#4040E0;;
+  height: 50%;
+  margin-top: 50px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  color: #A0A0FF;
+}
+
+body{
+  background-color:#A0A0FF;
+}
+
+
+/*h1 h2 h3 h5 all aligned center with the same color and font family*/
+h1,h2,h3,h5{
+  text-align: center;
+  color:#A0A0FF; /*#887ecb*/
+  font-family:c64,Arial, Helvetica, sans-serif;
+}
+
+/*set h1 to 25 px*/
+h1{
+  font-size: 25px;
+}
+
+/*set h2 to 15 px*/
+h2{
+  font-size: 15px;
+}
+
+/*set h3 to 13 px*/
+h3{
+  font-size: 13px;
+}
+
+/*set h5 to 13 px*/
+h5{
+  font-size: 16px;
+}
+
+/*set p to 15 px, justified, sets color and font family*/
+p{
+  font-size: 19px;
+  text-align:justify;
+  color: #A0A0FF;/*#887ecb;*/
+  font-family:c64,Arial, Helvetica, sans-serif;
+}
+
+/*sets the horizontal rule to the diamond shape*/
+hr {
+  width: 15px;
+  height: 15px;
+  background:#A0A0FF;/*#887ecb;*/
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transform: rotate(45deg);
+}
+
+/*unordered list, ordered list, list items and links all are the same color*/
+ol,ul,li,a{
+color:#A0A0FF;/*#887ecb;*/
+font-family: c64;
+list-style: none;
+}
+
+/*wrapper set to that content in intro, about, contact, and links section have same width,margin, and padding*/
+.wrapper {
+  /*width: 500px;*/
+  margin: auto;
+  padding: 20px;
+}
+
+/*sets the field where the text is setup to have the darker background with lighter text*/
+.textfield{
+  background-color: #50459b;
+  margin: auto;
+  padding: 10px;
+  width: 75%;
+  height: 75%;
+  
+}
+
+/*sets background to have a darker color with auto margin and 20 px padding*/
+.background{
+  background-color:#887ecb;
+  margin: auto;
+  padding: 20px;
+}
+
+/*psuedo classes for behavior of links*/
+a:link    { color: #A0A0FF;/*#887ecb*/  }
+a:visited { color: #c9d487   }
+a:hover   { color: #9ae29b  }
+a:active  { color:white  }
+
+/*css to center an image*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+@font-face {
+  font-family: "c64";
+  src: url("fonts/c64.woff") format("woff");
+    
+}
+
+input{
+
+  width: 100%;
+}
+
+form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #A0A0FF;
+  font-family: c64;
+}
+
+form textarea {
+  height: 4.75rem;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+header{
+  
+  /*add 40 pixels of space under header*/
+  margin-bottom: 40px;
+}
+
+header h1{
+
+  font-family: c64;
+
+  font-size: 14px;
+
+  /*sets color to whire*/
+  color: #fff;
+
+  /*centers text*/
+  text-align: center;
+
+  /*removes default margin*/
+  margin: 0;
+
+  /*pushes the text down 20 pixels the top of th page*/
+
+  padding-top: 20px;
+}
+
+header nav{
+  /*the default is block and we change to flex*/
+
+  display: flex;
+
+  /*centers an element defined as dsiplay: flex*/
+
+  justify-content: center;
+}
+
+header nav ul{
+
+  /*justify-content: center;*/
+  /*the default is block and we change to flex*/
+
+  display: flex;
+
+  /* We want the nav to display in a single-row - this is 
+   the default for `display: flex` so we don't need to define its `flex-direction`, in this case */
+
+/* This removes the default padding to the left of the
+   unordered list. */
+
+   padding-left: 3px;
+
+   /*removes the bullet points from the list items in the unordered list*/
+
+   list-style: none;
+}
+
+header nav ul li a{
+
+  font-family: c64;
+
+  /*the link color is white*/
+  color: #fff;
+
+  /*removes the underline to link*/
+  text-decoration: none;
+
+  /*applies 20 pixels or margin to the ricght of each link creating a visual gap*/
+   margin: 0 10px 0 0 ;
+}
+
+header nav ul li: :last-child a {
+  /*removes the margin to the right of the last anchor tag so that the nav appears centered*/
+  margin-right: 0;
+}
+
+/* Groups & Items  (Mobile First) */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+  margin: 10px;
+}
+
+.item-triple{
+  
+  flex: 3;
+  margin: 10px;
+}
+/* when a web browser is used and is larger than 600px*/
+@media all and (min-width: 600px){
+
+  section {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+
+  header{
+      /*change the default setting from block to flex*/
+      display: flex;
+
+      /*push the items to the far sides of the browser with space between them*/
+      justify-content: center;
+
+      /*add 0 pixels padding top & bottom and 30 pixels to the right*/
+      padding: 0 30px;
+  }
+
+  header h1 {
+
+      font-size: 48px;
+
+      /*sets 14 pixels of margin above & below the h1 tag 0 pixels to the left & right*/
+      margin: 14px 0;
+
+      /*remove or set 0 pixels of padding above the h1 tag*/
+      padding-top: 0;
+  }
+
+  header nav{
+      /*push down the navigation  container 8 pixels to make it better visually*/
+      margin-top: 8px;
+  }
+
+  header nav ul li a:a:link    { color: #A0A0FF;/*#887ecb*/  }
+  header nav ul li a:a:visited { color: #c9d487   }
+  header nav ul li a:a:hover   { color: #9ae29b  }
+  header nav ul li a:a:active  { color:white  }
+}
+
+  
+ /*  Groups & Items  (Desktop) 
+  
+  @media all and (min-width: 800px) {
+    section {
+      padding: 0 10%;
+    }
+  
+    .group {
+      flex-direction: row;
+    }
+  }*/
