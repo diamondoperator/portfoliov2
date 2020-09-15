@@ -154,6 +154,7 @@ header h1{
 
   /*removes default margin*/
   margin: 0;
+  
 
   /*pushes the text down 20 pixels the top of th page*/
 
@@ -202,7 +203,7 @@ header nav ul li a{
   text-decoration: none;
 
   /*applies 20 pixels or margin to the ricght of each link creating a visual gap*/
-   margin: 0px 10px 0px 0px ;
+   margin: 0px 10px 15px 0px ;
 }
 
 header nav ul li: :last-child a {
