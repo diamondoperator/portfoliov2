@@ -61,6 +61,8 @@ hr {
 
 /*unordered list, ordered list, list items and links all are the same color*/
 ol,ul,li,a{
+  display: flex;
+  flex-direction: column;
 color:#A0A0FF;/*#887ecb;*/
 font-family: c64;
 list-style: none;
@@ -190,6 +192,7 @@ header nav ul{
 
 header nav ul li a{
 
+  text-align: center;
   font-family: c64;
 
   /*the link color is white*/
@@ -199,7 +202,7 @@ header nav ul li a{
   text-decoration: none;
 
   /*applies 20 pixels or margin to the ricght of each link creating a visual gap*/
-   margin: 0 10px 0 0 ;
+   margin: 0px 10px 0px 0px ;
 }
 
 header nav ul li: :last-child a {
@@ -230,8 +233,22 @@ header nav ul li: :last-child a {
   flex: 3;
   margin: 10px;
 }
+
+#services{
+  color: green;
+}
+
+.asterix
+{
+  font-size: 10px;
+}
+
+
+
+/*change fonts to test*/
 /* when a web browser is used and is larger than 600px*/
 @media all and (min-width: 600px){
+
 
   section {
     padding: 0 10%;
@@ -242,7 +259,44 @@ header nav ul li: :last-child a {
   }
 
 
+/*pastedfrom git hub*/
+
+header nav ul{
+
+  /*justify-content: center;*/
+  /*the default is block and we change to flex*/
+
+  display: flex;
+
+  /* We want the nav to display in a single-row - this is 
+   the default for `display: flex` so we don't need to define its `flex-direction`, in this case */
+
+/* This removes the default padding to the left of the
+   unordered list. */
+
+   padding-left: 3px;
+
+   /*removes the bullet points from the list items in the unordered list*/
+
+   list-style: none;
+}
+
+
+header nav ul li: :last-child a {
+  /*removes the margin to the right of the last anchor tag so that the nav appears centered*/
+  margin-right: 0;
+}
+
+/*endof paste from git hub*/
+
+
+
   header{
+
+       
+  /* git hub add 40 pixels of space under header*/
+  margin-bottom: 40px;
+
       /*change the default setting from block to flex*/
       display: flex;
 
@@ -265,8 +319,20 @@ header nav ul li: :last-child a {
   }
 
   header nav{
+
+     /*the default is block and we change to flex*/
+
+  display: flex;
+
+  /*centers an element defined as dsiplay: flex*/
+
+  justify-content: center;
       /*push down the navigation  container 8 pixels to make it better visually*/
       margin-top: 8px;
+  }
+
+  header nav ul li a{
+    font-size: 25px;
   }
 
   header nav ul li a:a:link    { color: #A0A0FF;/*#887ecb*/  }
@@ -276,14 +342,3 @@ header nav ul li: :last-child a {
 }
 
   
- /*  Groups & Items  (Desktop) 
-  
-  @media all and (min-width: 800px) {
-    section {
-      padding: 0 10%;
-    }
-  
-    .group {
-      flex-direction: row;
-    }
-  }*/
